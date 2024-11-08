@@ -1,0 +1,130 @@
+'''day = int(input('Ведите номер дня недели: '))
+
+if day == 1:
+    print('1 день - понедельник')
+elif day == 2:
+    print('2 ень - вторник')
+elif day == 3:
+    print('3 день - среда')
+elif day == 4:
+    print('4 - четверг')
+elif day == 5:
+    print('5 день - пятница')
+elif day == 6:
+    print('6 день - суббота')
+elif day == 7:
+    print('7 день - воскресенье ')
+else:
+    print('Мне кажется вы ввели что-то неверно')
+'''
+
+
+
+
+'''month = int(input('Введите номер месяца: '))
+
+if month == 1:
+    print('1 месяц - январь')
+elif month == 2:
+    print('2 месяц - февраль')
+elif month == 3:
+    print('3 месяц - март')
+elif month == 4:
+    print('4 месяц - апрель')
+elif month == 5:
+    print('5 месяц - май')
+elif month == 6:
+    print('6 месяц - июнь')
+elif month == 7:
+    print('7 месяц - июль')
+elif month == 8:
+    print('8 месяц - август')
+elif month == 9:
+    print('9 месяц - сентябрь')
+elif month == 10:
+    print('10 месяц - октябрь')
+elif month == 11:
+    print('11 месяц - ноябрь')
+elif month == 12:
+    print('12 месяц - декабрь')
+else:
+    print('Мне кажется вы ввели что-то неверно')'''
+
+
+
+'''num = input("Введите число: ")
+try:
+    num = int(num)
+    if num > 0:
+        print('Number is positive')
+    elif num < 0:
+        print('Number is negative')
+    else:
+        print('Number is equal to zero')
+except ValueError:
+    print("Это не число!")'''
+
+
+
+
+# num1 = input('Введите первое число: ')
+# num2 = input('Введите второе число: ')
+# try:
+#     num1 = int(num1)
+#     num2 = int(num2)
+#     if num1 == num2:
+#         print('Числа равны')
+#     elif num1 < num2:
+#         print(f'Числа не равны, вывожу в порядке возрастания: \n{num1}; {num2}')
+#     else:
+#         print(f'Числа не равны, вывожу в порядке возрастания: \n{num2}; {num1}')
+# except ValueError:
+#     print('Вы ввели где-то не число!!!')
+
+
+
+'''
+num = int(input('Введите число в диапозоне от 1 до 100: '))
+if num > 1 and num < 100:
+    if num % 3 == 0 and num % 5 == 0:
+        print('Fizz Buzz')
+    elif num % 5 == 0:
+        print('Buzz')
+    elif num % 3 == 0:
+        print('Fizz')
+else:
+    print('Число не в диапозоне!!!')'''
+
+
+
+# num = int(input('Введите  число: '))
+# degree = int(input('Введите степень числа: '))
+#
+# if degree >= 0 and degree <= 7:
+#     print(num ** degree)
+# else:
+#     print('Степень должна быть от 0 до 7!!!')
+
+
+
+def pay(sales):
+    if sales < 500:
+        work_pay = 200 + sales * 0.03
+        return work_pay
+    elif sales > 500 and sales < 1000:
+        work_pay = 200 + sales *0.05
+        return work_pay
+    elif sales > 1000:
+        work_pay = 200 + sales *0.08
+        return work_pay
+
+managers = {} # ключ - мэнеджер, значение - его зарплата
+
+num_managers = int(input('Введите кол-во мэнеджеров: '))
+for manager in range(num_managers):
+    name = input('Назовите мэнеджера: ')
+    sales = int(input('Введите кол-во продадж сделанных этим мэнеджером: '))
+    managers[name] = pay(sales)
+
+prodaji = list(managers.values())
+print(prodaji)
